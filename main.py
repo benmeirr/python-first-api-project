@@ -3,6 +3,7 @@ from controller.user_controller import router as user_router
 from controller.order_controller import router as order_router
 from controller.customer_controller import router as customer_router
 from controller.customer_order_controller import router as customer_order_router
+from controller.auth_controller import router as auth_router
 from repository.database import database
 
 app = FastAPI()
@@ -22,3 +23,4 @@ app.include_router(user_router)
 app.include_router(order_router)
 app.include_router(customer_router)
 app.include_router(customer_order_router)
+app.include_router(auth_router)
